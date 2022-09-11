@@ -1,0 +1,5 @@
+# version of the python
+# Check https://devcenter.heroku.com/articles/python-support
+# Because heroku may not support this version any longer, so you should change the version onto the relevant one
+# if the version below is not relevant
+python-3.10.6
