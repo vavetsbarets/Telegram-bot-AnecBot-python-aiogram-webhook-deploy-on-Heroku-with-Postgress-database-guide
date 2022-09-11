@@ -6,4 +6,4 @@ While creating this telegram bot, I saw plenty of videos about how to create tel
 
 ## make the bot run on webhooks and deploy it on the server using Heroku
 
-## Connect to the database
+## Connect to the Postgress database to the bot and the Heroku server, using Heroku Postgresser
