@@ -8,7 +8,7 @@ While creating this telegram bot, I saw plenty of videos about how to create tel
 Author creates simple echo bot 
 
 [Info about buttons](https://www.youtube.com/watch?v=I8K3iYcxPl0)
-Starts from echo bot and adds some more <br /> 
+Starts from echo bot and adds some more  
 features
 
 ## make the bot run on webhooks and deploy it on the server using Heroku
