@@ -1,8 +1,10 @@
 # How to connect a telegram bot to a database, make it run on webhooks and deploy it on the server?
 
+## 1. Intro
+
 While creating this telegram bot, I saw plenty of videos about how to create telegram bots on python and how to create and handle different buttons and other features of the bot. However, there is lack of information about how to deploy the bot on the server, so it can run 24/7 and how to make it run on webhooks, so that the bot can operate much faster than they do if they are run using long-polling technique. In this tutorial I want to share my own experience in this topic and, using my own project, show how to run the Telegram bot with the Postress database on the Heroku server with the help of webhooks. 
 
-## General information about aiogram
+## 2. General information about aiogram
 Here is some information about the specific syntaxis of aiogram to get more understanding about the code in bot_anecbot.py and how aiogram works in general. 
   
 1. [About creation bot in general](https://www.youtube.com/watch?v=I8K3iYcxPl0) (watch from 1:45 to 5:15)  
@@ -14,11 +16,14 @@ The author of this video starts with the echo bot (almost the same code as the o
 Now you have more understanding of how aiogram works. In the bot_anecbot.py the same syntaxis is used, but there are more buttons and algorithms than in the videos above and there is some work with psycopg2 as well (you can check Postgresser_telegram_bot.py file with the functions which deal with the database as well). Note, that you may find types.InlineKeyboardMarkup or types.InlineKeyboardButton and @dp.callback_query_handler(lambda call:True) unfamiliar, but the first couple represents the keyboard and the button under some message sent by the bot (I will attach the example of such buttons below, with buttons from 1 to 10 and "Добавить в "Сохранённые"" being under the message) and the second is the handler which handles all the buttons of such type.  
 <img src="https://user-images.githubusercontent.com/92990826/189541909-bf5ce124-cc3b-4d57-91ad-d0fddc7e422d.png" width=65% height=65%>  
   
-So you can inspect bot_anecbot.py and Postgreser_telegram_bot.py for more understanding of how aiogram works (there are some explanations provided there) and, of course, you can find some more advanced aiogram tutorials on the internet. Also it may be helpful to try out the bot itself, so here is the [link](https://t.me/bot_anecbot) to it.  
+So you can inspect bot_anecbot.py and Postgreser_telegram_bot.py for more understanding of how aiogram works (there are some explanations provided there) and, of course, you can find some more advanced aiogram tutorials on the internet. Also it may be helpful to try out the bot itself, so here is the [link](https://t.me/bot_anecbot) to it. If the bot does not work/respond, it may be turned off. You can email me (v.s.averin26@gmail.com) if you want to try this bot out, and I will turn it back on (note, that the bot is in Russian). 
 
-## make the bot run on webhooks and deploy it on the server using Heroku
-Show Howdi video and say that I did similar, but there are some differences, due to webhook, also mention that git is used to publish basically
-While I was creating this bot
+## 3. make the bot run on webhooks and deploy it on the server using Heroku
+While I was creating this bot [this video](https://www.youtube.com/watch?v=TtvNVDilh60&t=590s) about deploying Telegram Bot on Heroku was really helpful to me (the author starts deploying the bot at 9:50 in the video). This video is in Russian and the author used long-polling method to deploy the bot, so I am going to show how to deploy the bot on webhooks using Heroku, using my project, but with some minor changes, you can deploy simple echo bot as well (I will explain it later as well). Basically, there some minor differences compared to the algorithm in the video which was mentioned previously.
+
+### a) How did I deploy my bot
+
+### b) How to deploy simple echo bot
 
 ## Connect to the Postgress database to the bot and the Heroku server, using Heroku Postgresser
 Just connect to database in psycopg2 and so on
