@@ -1,6 +1,8 @@
 import os
 
 # When you create your bot in Bot_father, it gives you the token, enter this token here
+# Note, that *** should not be actually left anywhere in this code, here it should be 
+    # just token in the quotation marks, for example
 TOKEN = '***ENTER YOUR TELEGRAM BOT TOKEN HERE***'
 
 # This is not needed in general in the bot's creation and deploy. 
@@ -12,7 +14,8 @@ my_id = ***ENTER YOUR TELEGRAM ID (OPTIONAL)***
 
 
 # Postgress server database info
-# Once you obtained the heroku-postrgress database, in the settings you can find its credentials, add these credentials here
+# Once you obtained the heroku-postrgress database, in the settings you can find its credentials,
+    # add these credentials here
 USER = '***ENTER THE USERNAME OF YOUR DATABASE CONNECTION***'
 PASSWORD = '***ENTER THE PASSWORD OF YOUR DATABASE CONNECTION***'
 HOST = '***ENTER THE HOST OF YOUR DATABASE CONNECTION***'
