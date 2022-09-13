@@ -19,9 +19,17 @@ Now you have more understanding of how aiogram works. In the bot_anecbot.py the 
 So you can inspect bot_anecbot.py and Postgreser_telegram_bot.py for more understanding of how aiogram works (there are some explanations provided there) and, of course, you can find some more advanced aiogram tutorials on the internet. Also it may be helpful to try out the bot itself, so here is the [link](https://t.me/bot_anecbot) to it. If the bot does not work/respond, it may be turned off. You can email me (v.s.averin26@gmail.com) if you want to try this bot out, and I will turn it back on (note, that the bot is in Russian). 
 
 ## 3. make the bot run on webhooks and deploy it on the server using Heroku
-While I was creating this bot [this video](https://www.youtube.com/watch?v=TtvNVDilh60&t=590s) about deploying Telegram Bot on Heroku was really helpful to me (the author starts deploying the bot at 9:50 in the video). This video is in Russian and the author used long-polling method to deploy the bot, so I am going to show how to deploy the bot on webhooks using Heroku, using my project, but with some minor changes, you can deploy simple echo bot as well (I will explain it later as well). Basically, there some minor differences compared to the algorithm in the video which was mentioned previously.
+While I was creating this bot [this video](https://www.youtube.com/watch?v=TtvNVDilh60&t=590s) about deploying Telegram Bot on Heroku was really helpful to me (the author starts deploying the bot at 9:50 in the video). This video is in Russian and the author used long-polling method to deploy the bot, so I am going to show how to deploy the bot on webhooks using Heroku, using my project. However, with some minor changes, you can deploy simple echo bot as well (I will explain it later as well). Basically, there some minor differences compared to the algorithm in the video which was mentioned previously.
 
 ### a) How did I deploy my bot
+#### i) Preparatory steps
+1. Install git and github on your computer and create an account in Heroku. 
+2. Creating Procfile, requirements.txt, config_Anecbot.py, runtime.txt. You can check what each file means in these files in the repository itself. 
+#### ii) Running the bot on webhooks instead of long-polling
+Here I list some changes which allow me to deploy the bot on webhooks instead of long-polling: 
+1. Changes in bot_anecbot.py: you should import start_webhook function from aiogram.utils.executor (line 26 of bot_anecbot.py) and change if __name__ == '__main__' bit of code and the end of file (check the bottom of the bot_anecbot.py to see the differences. You can delete on_startup and on_shutdown arguments in your project if you don't want your bot to do anything when it's turned on/off)
+2. Changes in config_AnecBot.py: just adding this chunk of code in the file (this chunk is exactly how it looks in my final project)
+<img src = "https://user-images.githubusercontent.com/92990826/189881862-5c8d9098-7449-488e-b3f0-d7a7aa5be925.png">
 
 ### b) How to deploy simple echo bot
 
