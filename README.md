@@ -36,10 +36,14 @@ Here I list some changes which allow me to deploy the bot on webhooks instead of
 Once the previous steps are done, these are the final steps in order to deploy the bot on the Heroku servers (note, that I deployed the bot using the computer with Windows, but I think that the same steps can be successfully done on MacOS, Linux and other systems as well):  
 1. Open the command line (shell, Powershell etc)  
 2. Move to the path where your project is located using cd (i.e. type 'cd D:/Documents/Bot' in your command line if the project lies in the D:/Documents/Bot directory) (Note that here and further on when it says type 'something', you should type something without single quotation marks)  
-3. Type: 'heroku login' and then press any key other than q as it is asked in the shell  
+3. Type and run 'heroku login' and then press any key other than q as it is asked in the shell  
 4. Checked that it says 'logged in' by Heroku CLI in the opened browser  
-5. Then type in the command line: 'git init' then 'git add' and 'git commit -m "***TYPE ANY MESSAGE ABOUT VERSION AS YOU WISH***"'  
-6. Type 'heroku create ***AppName***' (AppName can be any which was not previously used in Heroku  
+5. Then type in the command line and run 'git init' then 'git add' and then 'git commit -m "***TYPE ANY MESSAGE ABOUT VERSION AS YOU WISH***"'  
+6. Type 'heroku create ***AppName***' (AppName can be any which was not previously used in Heroku)
+7. Type 'git remote -v' to check that you can push your project and then type 'git push heroku master' to actually deploy your project to Heroku (this process may take several minutes)
+8. If there were no errors during the deploy, then go to your heroku account, you should see that there is an app there like in the photo below  
+<img src = "https://user-images.githubusercontent.com/92990826/189923736-7764dafb-9f13-40fc-a446-bf646d71e505.png" width=40% height=40%>
+
 
 FINISH IT AND WRITE ABOUT THREE STARS THAT YOU SHOULD NOT INCLUDE THEM
 
