@@ -29,7 +29,7 @@ While I was creating this bot [this video](https://www.youtube.com/watch?v=TtvNV
 Here I list some changes which allow me to deploy the bot on webhooks instead of long-polling: 
 1. Changes in bot_anecbot.py: you should import start_webhook function from aiogram.utils.executor (line 26 of bot_anecbot.py) and change if __name__ == '__main__' bit of code and the end of file (check the bottom of the bot_anecbot.py to see the differences. You can delete on_startup and on_shutdown arguments in your project if you don't want your bot to do anything when it's turned on/off)
 2. Changes in config_AnecBot.py: just adding this chunk of code in the file (this chunk is exactly how it looks in my final project)
-<img src = "https://user-images.githubusercontent.com/92990826/189881862-5c8d9098-7449-488e-b3f0-d7a7aa5be925.png" width=80% height=80%>
+<img src = "https://user-images.githubusercontent.com/92990826/189881862-5c8d9098-7449-488e-b3f0-d7a7aa5be925.png" width=60% height=60%>
 
 ### b) How to deploy simple echo bot
 
