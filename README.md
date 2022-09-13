@@ -13,7 +13,7 @@ Author creates simple echo bot (bot replies with the same text as the one in the
 2. [Info about keyboard buttons appearance when using the bot](https://www.youtube.com/watch?v=I8K3iYcxPl0)  
 The author of this video starts with the echo bot (almost the same code as the outcome at the 4:45 of the first video) and then adds the Keyboard buttons and write some simple algorithms in the handlers of the created buttons (video is in Russian as well, but the author shows all the code and the outcome, so the part of the video can also be quite clear even for non-Russian speakers)  
   
-Now you have more understanding of how aiogram works. In the bot_anecbot.py the same syntaxis is used, but there are more buttons and algorithms than in the videos above and there is some work with psycopg2 as well (you can check Postgresser_telegram_bot.py file with the functions which deal with the database as well). Note, that you may find types.InlineKeyboardMarkup or types.InlineKeyboardButton and @dp.callback_query_handler(lambda call:True) unfamiliar, but the first couple represents the keyboard and the button under some message sent by the bot (I will attach the example of such buttons below, with buttons from 1 to 10 and "Добавить в "Сохранённые"" being under the message) and the second is the handler which handles all the buttons of such type.  
+Now you have more understanding of how aiogram works. In the bot_anecbot.py the same syntaxis is used, but there are more buttons and algorithms than in the videos above and there is some work with psycopg2 as well (you can check Postgresser_telegram_bot.py file with the functions which deal with the database as well). Note, that you may find types.InlineKeyboardMarkup or types.InlineKeyboardButton and @dp.callback_query_handler(lambda call:True) unfamiliar, but the first couple represents the keyboard and the button under some message sent by the bot (I will attach the example of such buttons below, with buttons from 1 to 10 and "Добавить в "Сохранённые"" being under the message) and the second is the handler which handles all the buttons of such type.   
 <img src="https://user-images.githubusercontent.com/92990826/189541909-bf5ce124-cc3b-4d57-91ad-d0fddc7e422d.png" width=65% height=65%>  
   
 So you can inspect bot_anecbot.py and Postgreser_telegram_bot.py for more understanding of how aiogram works (there are some explanations provided there) and, of course, you can find some more advanced aiogram tutorials on the internet. Also it may be helpful to try out the bot itself, so here is the [link](https://t.me/bot_anecbot) to it. If the bot does not work/respond, it may be turned off. You can email me (v.s.averin26@gmail.com) if you want to try this bot out, and I will turn it back on (note, that the bot is in Russian). 
@@ -29,16 +29,16 @@ While I was creating this bot [this video](https://www.youtube.com/watch?v=TtvNV
 Here I list some changes which allow me to deploy the bot on webhooks instead of long-polling: 
 1. Changes in bot_anecbot.py: you should import start_webhook function from aiogram.utils.executor (line 26 of bot_anecbot.py) and change if __name__ == '__main__' bit of code and the end of file (check the bottom of the bot_anecbot.py to see the differences. You can delete on_startup and on_shutdown arguments in your project if you don't want your bot to do anything when it's turned on/off)
 2. Changes in config_AnecBot.py: just adding this chunk of code in the file (this chunk is exactly how it looks in my final project)
-<img src = "https://user-images.githubusercontent.com/92990826/189881862-5c8d9098-7449-488e-b3f0-d7a7aa5be925.png" width=40% height=40%>
-3. Changes in the Procfile: just write 'web' instead of 'worker' (check Procfile in the repository)  
+<img src = "https://user-images.githubusercontent.com/92990826/189881862-5c8d9098-7449-488e-b3f0-d7a7aa5be925.png" width=40% height=40%>  
+3. Changes in the Procfile: just write 'web' instead of 'worker' (check Procfile in the repository)     
 #### iii) Deploying the bot (on webhook) using heroku  
 Once the previous steps are done, these are the final steps in order to deploy the bot on the Heroku servers (note, that I deployed the bot using the computer with Windows, but I think that the same steps can be successfully done on MacOS, Linux and other systems as well):  
 1. Open the command line (shell, Powershell etc)  
-2. Move to the path where your project is located using cd (i.e. type 'cd D:/Documents/Bot' in your command line if the project lies in the D:/Documents/Bot directory) (Note that here and further on when it says type 'something', you should type something without single quotation marks)
-3. Type: 'heroku login' and then press any key other than q as it is asked in the shell
-4. Checked that it says 'logged in' by Heroku CLI in the opened browser
-5. Then type in the command line: 'git init' then 'git add' and 'git commit -m "***TYPE ANY MESSAGE ABOUT VERSION AS YOU WISH***"'
-6. Type 'heroku create ***AppName***' (AppName can be any which was not previously used in Heroku
+2. Move to the path where your project is located using cd (i.e. type 'cd D:/Documents/Bot' in your command line if the project lies in the D:/Documents/Bot directory) (Note that here and further on when it says type 'something', you should type something without single quotation marks)  
+3. Type: 'heroku login' and then press any key other than q as it is asked in the shell  
+4. Checked that it says 'logged in' by Heroku CLI in the opened browser  
+5. Then type in the command line: 'git init' then 'git add' and 'git commit -m "***TYPE ANY MESSAGE ABOUT VERSION AS YOU WISH***"'  
+6. Type 'heroku create ***AppName***' (AppName can be any which was not previously used in Heroku  
 
 FINISH IT AND WRITE ABOUT THREE STARS THAT YOU SHOULD NOT INCLUDE THEM
 
