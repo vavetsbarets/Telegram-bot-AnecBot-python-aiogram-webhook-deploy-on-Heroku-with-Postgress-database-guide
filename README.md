@@ -30,10 +30,10 @@ Here I list some changes which allow me to deploy the bot on webhooks instead of
 1. Changes in bot_anecbot.py: you should import start_webhook function from aiogram.utils.executor (line 26 of bot_anecbot.py) and change if __name__ == '__main__' bit of code and the end of file (check the bottom of the bot_anecbot.py to see the differences. You can delete on_startup and on_shutdown arguments in your project if you don't want your bot to do anything when it's turned on/off)
 2. Changes in config_AnecBot.py: just adding this chunk of code in the file (this chunk is exactly how it looks in my final project)
 <img src = "https://user-images.githubusercontent.com/92990826/189881862-5c8d9098-7449-488e-b3f0-d7a7aa5be925.png" width=40% height=40%>
-3. Changes in the Procfile: just write 'web' instead of 'worker' (check Procfile in the repository)
-#### iii) Deploying the bot (on webhook) using heroku
-Once the previous steps are done, these are the final steps in order to deploy the bot on the Heroku servers (note, that I deployed the bot using the computer with Windows, but I think that the same steps can be successfully done on MacOS, Linux and other systems as well): 
-1. Open the command line (shell, Powershell etc)
+3. Changes in the Procfile: just write 'web' instead of 'worker' (check Procfile in the repository)  
+#### iii) Deploying the bot (on webhook) using heroku  
+Once the previous steps are done, these are the final steps in order to deploy the bot on the Heroku servers (note, that I deployed the bot using the computer with Windows, but I think that the same steps can be successfully done on MacOS, Linux and other systems as well):  
+1. Open the command line (shell, Powershell etc)  
 2. Move to the path where your project is located using cd (i.e. type 'cd D:/Documents/Bot' in your command line if the project lies in the D:/Documents/Bot directory) (Note that here and further on when it says type 'something', you should type something without single quotation marks)
 3. Type: 'heroku login' and then press any key other than q as it is asked in the shell
 4. Checked that it says 'logged in' by Heroku CLI in the opened browser
