@@ -40,9 +40,21 @@ Once the previous steps are done, these are the final steps in order to deploy t
 4. Checked that it says 'logged in' by Heroku CLI in the opened browser  
 5. Then type in the command line and run 'git init' then 'git add' and then 'git commit -m "***TYPE ANY MESSAGE ABOUT VERSION AS YOU WISH***"'  
 6. Type 'heroku create ***AppName***' (AppName can be any which was not previously used in Heroku)
-7. Type 'git remote -v' to check that you can push your project and then type 'git push heroku master' to actually deploy your project to Heroku (this process may take several minutes)
-8. If there were no errors during the deploy, then go to your heroku account, you should see that there is an app there like in the photo below  
-<img src = "https://user-images.githubusercontent.com/92990826/189923736-7764dafb-9f13-40fc-a446-bf646d71e505.png" width=45% height=30%>
+7. Type 'git remote -v' to check that you can push your project and then type 'git push heroku master' to actually deploy your project to Heroku (this process may take several minutes and there is one more step before the bot starts to work)
+8. If there were no errors during the deploy, then go to your heroku account, you should see that there is an app there like in the photo below:   
+<img src = "https://user-images.githubusercontent.com/92990826/189923736-7764dafb-9f13-40fc-a446-bf646d71e505.png" width=40% height=40%>  
+Then click on your deployed app. Here you should see something like that: 
+<img src = "https://user-images.githubusercontent.com/92990826/189924799-122930f4-84f6-4a89-bd8d-ce44931e1800.png" width=80% height=80%>  
+Click on Configure Dynos and then you should see this:  
+![image](https://user-images.githubusercontent.com/92990826/189925386-4cec6341-ef04-434c-a6eb-0682f6ee886f.png)
+Click on the 'pen' (edit dyno formation) and then turn on the bot and press confirm like in the photo below (I have 7.00 dollars plan, but when you first do that, it should be free plan, then you can easily switch to any of non-free plans if you wish):  
+![image](https://user-images.githubusercontent.com/92990826/189925725-0a0596f3-1d69-4b22-a314-24bb755ba1c3.png)  
+9. Basically your bot is deployed and turned on. I recomend looking at logs etc
+
+
+
+
+
 
 
 FINISH IT AND WRITE ABOUT THREE STARS THAT YOU SHOULD NOT INCLUDE THEM
