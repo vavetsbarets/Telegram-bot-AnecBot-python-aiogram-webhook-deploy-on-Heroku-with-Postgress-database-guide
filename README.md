@@ -42,7 +42,7 @@ Once the previous steps are done, these are the final steps in order to deploy t
 6. Type 'heroku create ***AppName***' (AppName can be any which was not previously used in Heroku)
 7. Type 'git remote -v' to check that you can push your project and then type 'git push heroku master' to actually deploy your project to Heroku (this process may take several minutes)
 8. If there were no errors during the deploy, then go to your heroku account, you should see that there is an app there like in the photo below  
-<img src = "https://user-images.githubusercontent.com/92990826/189923736-7764dafb-9f13-40fc-a446-bf646d71e505.png" width=40% height=40%>
+<img src = "https://user-images.githubusercontent.com/92990826/189923736-7764dafb-9f13-40fc-a446-bf646d71e505.png" width=45% height=30%>
 
 
 FINISH IT AND WRITE ABOUT THREE STARS THAT YOU SHOULD NOT INCLUDE THEM
