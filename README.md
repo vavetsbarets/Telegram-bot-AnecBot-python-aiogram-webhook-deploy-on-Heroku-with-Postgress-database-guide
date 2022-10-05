@@ -49,6 +49,7 @@ Click on Configure Dynos and then you should see this:
 ![image](https://user-images.githubusercontent.com/92990826/189925386-4cec6341-ef04-434c-a6eb-0682f6ee886f.png)
 Click on the 'pen' (edit dyno formation) and then turn on the bot and press confirm like in the photo below (I have 7.00 dollars plan, but when you first do that, it should be free plan, then you can easily switch to any of non-free plans if you wish):  
 ![image](https://user-images.githubusercontent.com/92990826/189925725-0a0596f3-1d69-4b22-a314-24bb755ba1c3.png)  
+  
 9. Basically your bot is deployed and turned on. I recomend looking at logs etc
 
 
