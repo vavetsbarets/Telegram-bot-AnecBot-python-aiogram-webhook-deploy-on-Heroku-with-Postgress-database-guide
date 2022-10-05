@@ -50,15 +50,9 @@ Click on Configure Dynos and then you should see this:
 Click on the 'pen' (edit dyno formation) and then turn on the bot and press confirm like in the photo below (I have 7.00 dollars plan, but when you first do that, it should be free plan, then you can easily switch to any of non-free plans if you wish):  
 <img src = "https://user-images.githubusercontent.com/92990826/189925725-0a0596f3-1d69-4b22-a314-24bb755ba1c3.png">
   
-9. Basically your bot is deployed and turned on. I recomend looking at logs etc
+9. Basically your bot is deployed and turned on. After that I usually View logs to make sure there are no errors and I recommend you to do it as well. To do so click More and View logs like in the photo below:  
+<img src = "https://user-images.githubusercontent.com/92990826/194127740-597421c0-1cad-4034-8c85-73d47c55b6e3.png">
 
-
-
-
-
-
-
-FINISH IT AND WRITE ABOUT THREE STARS THAT YOU SHOULD NOT INCLUDE THEM
 
 ### b) How to deploy simple echo bot
 
