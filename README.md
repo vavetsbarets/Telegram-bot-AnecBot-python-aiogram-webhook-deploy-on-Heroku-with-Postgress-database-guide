@@ -55,9 +55,16 @@ Click on the 'pen' (edit dyno formation) and then turn on the bot and press conf
 
 
 ### b) How to deploy simple echo bot
+Well, all you need to do is to copy my repository and do some changes:  
+1. You can delete these files:  
+2. code like in howdi ho video 4:45
+3. change if == main to mine and remove on-shutdown + on-startup arguments
+4. do all the steps in the section a) and your echo bot should be working on the Heroku server
 
 ## Connect to the Postgress database to the bot and the Heroku server, using Heroku Postgresser
-Just connect to database in psycopg2 and so on
+Just connect to database in psycopg2 and so on  
+Just describe in heroku and how I dealt, mention credentials and so on.  
+Things like how create database and move data to it leave to auditory. Maybe mention that to add/alter data to the tables manually I needed psql and add link maybe about how to do that
 
 ## Sources, list all of the sources!!!
 
