@@ -9,7 +9,7 @@ The jokes were parsed from various sourses in Telegram and VK social media
 
 ## Some screenshots of the user interface
 In general, the user will see the keyboard with the buttons like that:   
-<img src = "https://user-images.githubusercontent.com/92990826/194267276-4bbe03dd-806b-490f-a79e-6667b7c76b0a.png" width=20% height=20%>     
+<img src = "https://user-images.githubusercontent.com/92990826/194267276-4bbe03dd-806b-490f-a79e-6667b7c76b0a.png" width=30% height=30%>     
   
 After the user presses the button Анек, for example, the joke is sent and the inline keyborad button appears under the message with the joke like in the photo below:  
 <img src = "https://user-images.githubusercontent.com/92990826/194269050-58ded322-841c-4dd7-97da-f9a51624688e.png" width=50% height=50%>  
