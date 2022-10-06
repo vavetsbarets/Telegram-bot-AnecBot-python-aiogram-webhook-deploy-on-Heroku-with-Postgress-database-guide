@@ -46,12 +46,12 @@ Once the previous steps are done, these are the final steps in order to deploy t
 Then click on your deployed app. Here you should see something like that: 
 <img src = "https://user-images.githubusercontent.com/92990826/189924799-122930f4-84f6-4a89-bd8d-ce44931e1800.png" width=80% height=80%>  
 Click on Configure Dynos and then you should see this:  
-<img src = "https://user-images.githubusercontent.com/92990826/189925386-4cec6341-ef04-434c-a6eb-0682f6ee886f.png">
+<img src = "https://user-images.githubusercontent.com/92990826/189925386-4cec6341-ef04-434c-a6eb-0682f6ee886f.png" width=50% height=50%>
 Click on the 'pen' (edit dyno formation) and then turn on the bot and press confirm like in the photo below (I have 7.00 dollars plan, but when you first do that, it should be free plan, then you can easily switch to any of non-free plans if you wish):  
-<img src = "https://user-images.githubusercontent.com/92990826/189925725-0a0596f3-1d69-4b22-a314-24bb755ba1c3.png">
+<img src = "https://user-images.githubusercontent.com/92990826/189925725-0a0596f3-1d69-4b22-a314-24bb755ba1c3.png" width=50% height=50%>
   
 9. Basically your bot is deployed and turned on. After that I usually View logs to make sure there are no errors and I recommend you to do it as well. To do so click More and View logs like in the photo below:  
-<img src = "https://user-images.githubusercontent.com/92990826/194127740-597421c0-1cad-4034-8c85-73d47c55b6e3.png">
+<img src = "https://user-images.githubusercontent.com/92990826/194127740-597421c0-1cad-4034-8c85-73d47c55b6e3.png" width=50% height=50%>
 
 
 ### b) How to deploy simple echo bot
@@ -59,7 +59,7 @@ Well, all you need to do is to copy my repository and do some changes:
 1. You can delete these files: all markdown files, requirements.txt, Postgresser_telegram_bot.py, robot_saying_hi.webp 
 2. Instead of my code in bot_anecbot.py you can put the one which can be found at 4:45 [here](https://www.youtube.com/watch?v=I8K3iYcxPl0)
 3. Slight change to the point above: change if __name__ == '__main__': clause onto this one:
-<img src = "https://user-images.githubusercontent.com/92990826/194242507-d240f8c0-e9a3-4163-aecf-4551a39830f3.png">  
+<img src = "https://user-images.githubusercontent.com/92990826/194242507-d240f8c0-e9a3-4163-aecf-4551a39830f3.png" width=50% height=50%>  
 But also delete on_startup and on_shutdown arguremnts, since you don't have them in the echo bot.  
 4. In config_AnecBot.py delete all variables related to the database (USER, PASSWORD, HOST, PORT, DATABASE)
 5. do all the steps in the section a) and your echo bot should be working on the Heroku server!
@@ -68,9 +68,9 @@ But also delete on_startup and on_shutdown arguremnts, since you don't have them
 ## Connect to the Postgress database to the bot and the Heroku server, using Heroku Postgres add-on
 1. Just find Add-on Heroku Postgres on Heroku and choose plan that you want. Do that once you've created the app by deploying the Bot (so first deploy the bot and then install add-on to it). 
 2. After installing this add-on you should see this add-on like on this photo (if you didn't install Papertail, you would not see this add-on on your account):
-<img src = "https://user-images.githubusercontent.com/92990826/194247224-1eb17f42-26a8-4961-8fe7-f2f2f52b50ec.png">
+<img src = "https://user-images.githubusercontent.com/92990826/194247224-1eb17f42-26a8-4961-8fe7-f2f2f52b50ec.png" width=50% height=50%>
 3. Then click on this Heroku Postgres add-on and then go to the settings like in the photo below: 
-<img src = "https://user-images.githubusercontent.com/92990826/194247665-01c9051a-88f2-4bb5-ab51-73e7a7e6ea1e.png">
+<img src = "https://user-images.githubusercontent.com/92990826/194247665-01c9051a-88f2-4bb5-ab51-73e7a7e6ea1e.png" width=50% height=50%>
 4. Once you've clicked on settings you can see View Credentials button and once you've clicked there you will find all info which you can use in configs and so on, to access the database manually and automatically in your code, so now you have database which can be attached to your bot!  
 
 ## Sources
