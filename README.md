@@ -56,17 +56,27 @@ Click on the 'pen' (edit dyno formation) and then turn on the bot and press conf
 
 ### b) How to deploy simple echo bot
 Well, all you need to do is to copy my repository and do some changes:  
-1. You can delete these files:  
-2. code like in howdi ho video 4:45
-3. change if == main to mine and remove on-shutdown + on-startup arguments
-4. do all the steps in the section a) and your echo bot should be working on the Heroku server
+1. You can delete these files: all markdown files, requirements.txt, Postgresser_telegram_bot.py, robot_saying_hi.webp 
+2. Instead of my code in bot_anecbot.py you can put the one which can be found at 4:45 [here](https://www.youtube.com/watch?v=I8K3iYcxPl0)
+3. Slight change to the point above: change if __name__ == '__main__': clause onto this one:
+<img src = "https://user-images.githubusercontent.com/92990826/194242507-d240f8c0-e9a3-4163-aecf-4551a39830f3.png">  
+But also delete on_startup and on_shutdown arguremnts, since you don't have them in the echo bot.  
+4. In config_AnecBot.py delete all variables related to the database (USER, PASSWORD, HOST, PORT, DATABASE)
+5. do all the steps in the section a) and your echo bot should be working on the Heroku server!
 
-## Connect to the Postgress database to the bot and the Heroku server, using Heroku Postgresser
-Just connect to database in psycopg2 and so on  
-Just describe in heroku and how I dealt, mention credentials and so on.  
-Things like how create database and move data to it leave to auditory. Maybe mention that to add/alter data to the tables manually I needed psql and add link maybe about how to do that
 
-## Sources, list all of the sources!!!
+## Connect to the Postgress database to the bot and the Heroku server, using Heroku Postgres add-on
+1. Just find Add-on Heroku Postgres on Heroku and choose plan that you want. Do that once you've created the app by deploying the Bot (so first deploy the bot and then install add-on to it). 
+2. After installing this add-on you should see this add-on like on this photo (if you didn't install Papertail, you would not see this add-on on your account):
+<img src = "https://user-images.githubusercontent.com/92990826/194247224-1eb17f42-26a8-4961-8fe7-f2f2f52b50ec.png">
+3. Then click on this Heroku Postgres add-on and then go to the settings like in the photo below: 
+<img src = "https://user-images.githubusercontent.com/92990826/194247665-01c9051a-88f2-4bb5-ab51-73e7a7e6ea1e.png">
+4. Once you've clicked on settings you can see View Credentials button and once you've clicked there you will find all info which you can use in configs and so on, to access the database manually and automatically in your code, so now you have database which can be attached to your bot!  
+
+## Sources
+Here I want to thank all the resources, which helped me to create this bot: 
+Youtube Channels: [Howdi Ho](https://www.youtube.com/c/HowdyhoNet), [Physics is simple](https://www.youtube.com/c/PhysicsisSimple)  
+And all the creators of the packages used in my code which made the creation of the bot possible
 
 ## Questions
-Thanks! If you have questions write me
+Thank you for reading this guide! Hope that it may be helpful! If you have any questions please write me on email: v.s.averin26@gmail.com or Telegram: @avs2607
